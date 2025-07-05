@@ -3,6 +3,7 @@ import { InputText } from 'primereact/inputtext';
 import { RadioButton } from 'primereact/radiobutton';
 import axios from 'axios';
 import striptags from 'striptags';
+import Exibir from './Exibir';
 
 const Busca = () => {
 
@@ -103,7 +104,12 @@ const Busca = () => {
             </label>
         </div>
       </div>
-
+      {climaTempo && (
+        <Exibir
+          clima={climaTempo}
+          opcao={opcao}
+        />
+      )}
     </div>
   );
 };
